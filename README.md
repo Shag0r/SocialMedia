@@ -1,5 +1,6 @@
 
-![image](https://github.com/user-attachments/assets/9438257f-7ae9-4179-8bf2-5986100a5ae9)
+![image](https://github.com/user-attachments/assets/4552707f-4c01-47cd-82e5-0598b9ef8531)
+
 
 Technical part: 
 a) Partial View
