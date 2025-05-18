@@ -61,17 +61,17 @@
                         </div>
                     </div>
                 </div>
-            
-            
-            <div class="bg-white rounded-xl shadow-sm md:p-4 p-2 space-y-4 text-sm font-medium border1" style="width: 580px;">
+
+
+                <div class="bg-white rounded-xl shadow-sm md:p-4 p-2 space-y-4 text-sm font-medium border1" style="width: 580px;">
                     Currently, there are no posts available. Would you like to create the first one?
-            </div>
-            
+                </div>
 
-            <div class="bg-white rounded-xl shadow-sm text-sm font-medium border1">
 
-                @*Post heading*@
-                    <div class="flex gap-3 sm:p-4 p-2.5 text-sm font-medium" >
+                <div class="bg-white rounded-xl shadow-sm text-sm font-medium border1">
+
+                    @*Post heading*@
+                    <div class="flex gap-3 sm:p-4 p-2.5 text-sm font-medium">
                         <a>
                             <img src="~/images/user.png" class="w-9 h-9 rounded-full" />
                         </a>
@@ -80,29 +80,29 @@
                             <a>
                                 <h4 class="text-black">Shagor Kumar Das</h4>
                                 <div class="text-xs text-gray-500/80" title="">@DateTime.Now.ToString("MMMM dd, yyyy hh:mm:ss tt")  </div>
-                            
+
                             </a>
 
                         </div>
                         <div class="-mr-1">
                             <button type="button" class="button-icon w-8 h-8"> <ion-icon class="text-xl" name="ellipsis-horizontal"></ion-icon> </button>
                             <div class="w-[245px] post-options-dropdown" uk-dropdown="pos: bottom-right; animation: uk-animation-scale-up uk-transform-origin-top-right; animate-out: true; mode: click">
-                                <form >
-                                    <input type="hidden" name="postId"  />
+                                <form>
+                                    <input type="hidden" name="postId" />
                                     <button type="submit" class="hover:!bg-red-50 icon-link">
                                         <ion-icon class="text-xl shrink-0" name="flag-outline"></ion-icon> Report
                                     </button>
                                 </form>
                                 <hr />
                                 <form>
-                                    <input type="hidden" name="postId"  />
+                                    <input type="hidden" name="postId" />
                                     <button type="submit" class="hover:!bg-red-50 icon-link">
                                         <ion-icon class="text-xl shrink-0" name="lock-closed-outline"></ion-icon> Private
                                     </button>
                                 </form>
                                 <hr />
                                 <form>
-                                    <input type="hidden" name="postId"  />
+                                    <input type="hidden" name="postId" />
                                     <button type="submit" class="hover:!bg-red-50 icon-link">
                                         <ion-icon class="text-xl shrink-0" name="trash-bin-outline"></ion-icon>Delete
                                     </button>
@@ -112,38 +112,69 @@
                         </div>
 
                     </div>
-                @*Post Content*@
+                    @*Post Content*@
 
-                <a>
-                    <div class="px-sm-4 p-2.5 pt-0 w-full">
+                    <a>
+                        <div class="px-sm-4 p-2.5 pt-0 w-full">
                             <p class="font-normal">
-                                
+
                                 Post anything about life. Simply follow  if you like  Alap
-                        </p>
-                    </div>
-                </a>
-                <a>
+                            </p>
+                        </div>
+                    </a>
+                    <a>
                         <div class="relative w-full h-full">
                             <img src="~/images/postbg.png" class="sm:rounded-lg w-full h-full object-cover" />
                         </div>
-                </a>
+                    </a>
 
-                @*Icons*@
+                    @*Icons*@
                     <div class="sm:p-4 p-2.5 flex items-center gap-4 text-xs font-semibold">
 
                         <div class="flex items-center gap-2.5">
-                            <a  class="button-icon text-red-500 bg-red-100">
-                                <ion-icon class="text-lg"
-                                          name="heart"></ion-icon>
+                            <a class="button-icon text-red-500 bg-red-100">
+                                <ion-icon class="text-lg" name="heart"></ion-icon>
                             </a>
+                            <a href="#"> 24</a>
 
                         </div>
 
+                        <div class="flex items-center gap-3">
+                            <a class="button-icon">
+                                <ion-icon class="text-lg" name="chatbubble-ellipses-outline"></ion-icon>
+                            </a>
+                            <a href="#">5</a>
+                        </div>
+
+                        <div class="ml-auto"></div>
+                        <div class="flex items-center gap-2">
+
+
+                            <a class="button-icon favorite-button ml-auto ">
+                                <ion-icon class="text-lg" name="bookmark"></ion-icon>
+                            </a>
+                        </div>
+
+
                     </div>
 
-                @*Add comment Section*@
+                    @*Add comment Section*@
+                    <div>
+                        <div class="sm:px-4 sm:py-3 p-2.5 border-t border-gray-100 flex items-center gap-1">
+                            <img src="~/images/user.png" class="w-6 h-6 rounded-full" />
+                            <div class="flex-1 relative overflow-hidden h-10">
+                                <textarea name="content" placeholder="Add Comment...."
+                                          rows="1"
+                                          class="w-full resize-none !bg-transparent px-4 py-2 focus:!border-transparent focus:!ring-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="text-sm rounded-full py-1.5 px-3.5 bg-secondery">Comment</button>
 
-            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
 
 
             </div>
@@ -151,6 +182,14 @@
         </div>
 
         <div class="flex-1">
+            <div class="lg:space-y-4 lg:pb-8 max-lg:grid sm:grid-cols-2 max-lg:gap-6">
+
+                <div class="box p-5 px-6">
+                    <partial name="Sidebar/_SuggestedFriends"></partial>
+                </div>
+            </div>
+
+
         </div>
     </div>
 </main>
